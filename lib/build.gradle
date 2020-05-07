@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
-//apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.novoda.bintray-release'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -21,24 +21,29 @@ android {
     }
 }
 
-//
-//publish {
-//    userOrg = 'hey'      //bintray注册的用户名
-//    groupId = 'com.hey.lib'         //compile引用时的第1部分groupId
-//    artifactId = 'HeySpinner'     //compile引用时的第2部分项目名
-//    publishVersion = '2.0.5'    //compile引用时的第3部分版本号
-//    desc = 'An custom spinner  '
-//    website = 'https://github.com/HeyJuly/HeySpinner'
+
+publish {
+    bintrayUser = localBintrayUser   //bintray.com用户名
+    bintrayKey = localBintrayApikey  //bintray.com apikey
+    userOrg = 'hey'      //bintray注册的用户名
+    groupId = 'com.hey'         //compile引用时的第1部分groupId
+    artifactId = 'HeySpinner'     //compile引用时的第2部分项目名
+    publishVersion = '2.1.8'    //compile引用时的第3部分版本号
+    desc = 'An custom spinner  '
+    website = 'https://github.com/HeyJuly/HeySpinner'
+}
+
+//uploadArchives{
+//    repositories.mavenDeployer{
+//        repository(url: "file:D://GitProject//maven")
+//        pom.groupId = "com.hey"
+//        pom.artifactId = "HeySpinner"
+//        pom.version = "2.1.8"
+//    }
 //}
 
-uploadArchives{
-    repositories.mavenDeployer{
-        repository(url: "file:D://GitProject//maven")
-        pom.groupId = "com.hey"
-        pom.artifactId = "HeySpinner"
-        pom.version = "2.1.8"
-    }
-}
+
+
 
 
 dependencies {
