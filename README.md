@@ -2,7 +2,7 @@
 
 An custom spinner 
 
-##Usage
+## Usage
 ```
 implementation 'com.hey.lib:HeySpinner:1.0.0'
 ```
@@ -35,7 +35,7 @@ List<String> data = new ArrayList<>();
 ```
 
 
-##Attributes
+## Attributes
 
 name | type | info 
 -|-|-|
@@ -45,7 +45,7 @@ arrowSrc    |   reference |set the drawable of the drop-down arrow
 
 
 
-##Custom 
+## Custom 
 
 ```
 class CustomAdapter extends HeySpinnerBaseAdapter<String> {
